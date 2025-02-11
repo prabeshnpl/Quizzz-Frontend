@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import withAuth from "../hoc/withAuth";
 
-const HomePage = () => {
+const HomePageMain = () => {
   const [startQuiz, setStartQuiz] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [loading, setLoading] = useState(false);
-  const[selectedAnswer, setSelectAnswer] = useState(null);
+  const [selectedAnswer, setSelectAnswer] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
 
   // Function to shuffle options randomly
@@ -133,4 +134,8 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+const HomePage = () => {
+  return <HomePageMain/>
+};
+
+export default withAuth(HomePage);

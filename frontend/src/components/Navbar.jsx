@@ -8,6 +8,8 @@ const Navbar = ()=>{
                     <li><Link to="/" className="tet hover:underline hover:text-sky-700">Home</Link></li>
                      <li><Link to="/Score-Board" className="tet hover:underline hover:text-sky-700">Score-Board</Link></li>
                     <li><Link to="/about" className="tet hover:underline hover:text-sky-700">About</Link></li>
+                    <li><Link to="/login" className="tet hover:underline hover:text-sky-700">Login</Link></li>
+                    <li><Link to="/register" className="tet hover:underline hover:text-sky-700">Register</Link></li>
                   </ul>
         </nav>
     )
